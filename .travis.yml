@@ -12,6 +12,6 @@ script:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=lamfalusy_booker
 deploy:
   provider: heroku
-  api-key: 
+  api_key: 
     secure: $HEROKU_API_KEY
   app: lamsoft-booker
