@@ -8,6 +8,10 @@ addons:
     organization: "lamfalusy"
     token:
       secure: "UISba5ZWnD8oQx/x3iw+Yit1NPKD+p/luD4DguVryo4z1YSoCOErht0Atjdl+sjI5T/Frko5yHcKs0YjVL6N1z+5jMTfaLsrZZeqtHzb/x+WL7N6Aga8mDbtWp/umm8kMax+NIVoV1yPvXEKwIIM0fqC6AAOao1JtAtq4voacWyquVOzBSlbxllMdMUalMOdq5+3sW6xCfTes5ZXvpRlFPHIBjqP9IZHWCT50vYLjTULe4TW+rR697vftL9gfY5RMie46XLa87QW2mP22TBFibmuV6adhq+smZr42bqhTmJfUeS6dWeOTX78TFLAnrPkCYrUGkD7vKopQtey6ZGTfNLjzqBIVszYFqN4TRGxiMyeQXQUWIzC+vw4tuIV1dQ389K2Da/N4zyoImkrsNM2HOer8UGTuR6J5CJ6bAKOEqBoPGIo/iomrz3JTebdGfApt9kR5RiFL5X8IqbBHAIFNxRPMp//dp+uWA1LZZA/6d1zdKK/KHiBrXJADhtIE6VtbIa12yIJVbNXytgWY2iJkoA1+KAvj8f4WRwoggCfBGBVbv++0x16glKslMv12R2mXPswwzxKOnSI2ThuMORXw5riYcKqSL2Wo8N+lRlDByazT2HO/QQWEnzxKgMmMvRlurBzAaYhUPI1DKfQjV+3HDGg9wY5MNwe0926y2ILYWs="
-
 script:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=lamfalusy_booker
+deploy:
+  provider: heroku
+  api-key: 
+    secure: $HEROKU_API_KEY
+  app: lamsoft-booker
