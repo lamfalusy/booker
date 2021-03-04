@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.ui.Model;
 
-class WelcomeControllerTest {
+public class WelcomeControllerTest {
 
     @Test
-    void testGreeting() {
+    public void testGreeting() {
         // Given
         WelcomeController underTest = new WelcomeController();
         Model model = Mockito.mock(Model.class);
