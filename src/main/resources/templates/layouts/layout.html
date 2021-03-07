@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>Booker</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css} "/>
+        <link th:rel="stylesheet" th:href="@{/css/sticky-footer-navbar.css} "/>
+    </head>
+    <body>
+        <header>
+    	    <div th:replace="/fragments/header :: header"></div>
+        </header>
+
+    	<main role="main" class="container">
+            <div layout:fragment="content"></div>
+        </main>
+        
+        <footer class="footer">
+            <div th:replace="/fragments/footer :: footer"></div>
+        </footer>
+        
+        <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+        <script th:src="@{/js/jquery-3.6.0.min.js}"></script>
+    </body>
+</html>
