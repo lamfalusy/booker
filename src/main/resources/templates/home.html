@@ -1,13 +1,16 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
-      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layouts/layout">
     <head>
-        <title>Booker</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Home</title>
     </head>
     <body>
-        <h1>Welcome!</h1>
+    	<div layout:fragment="content">
+            <h1 class="mt-5">Welcome!</h1>
         
-        <p>Click <a th:href="@{/welcome}">here</a> to see a greeting.</p>
+            <p>Click <a th:href="@{/welcome}">here</a> to see a greeting.</p>
+        </div>
     </body>
 </html>
